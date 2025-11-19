@@ -68,3 +68,31 @@ Content-Type: application/json
 ### (Pizza)
 GET {{url}}/order_items/pizza_id/3
 Content-Type: application/json
+
+
+### EMAIL
+POST {{url}}/sendmail
+Content-Type: application/json
+
+{
+    "to" : "dirig82884@agenra.com",
+    "subject" : "Teszt subject",
+    "message" : "Teszt üzenet"
+}
+
+### EMAIL
+POST {{url}}/sendmail
+Content-Type: application/json
+
+{
+    "template" : "registration",
+    "to" : "rekdavid@turr.hu",
+    "subject" : "laszti 🏐",
+    "data":{
+        "username":"Sándor",
+        "email":"sanyi@gmail.com",
+        "password" : "Titkos123",
+        "url" : "https://localhost:4200",
+        "csapat" : "Cisco123"
+    }
+}
